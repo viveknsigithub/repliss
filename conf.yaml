@@ -1,0 +1,34 @@
+source:
+  connection_details: 
+    server: LAPTOP115
+    database: testdb
+    username: viveknsi
+    password: password
+  transformers:
+    - table: students
+      columns:
+        - name: address
+          transformer_name: rndvar
+        - name: age
+          transformer_name: rndint4    
+        - name: email
+          transformer_name: email 
+        - name: email_bck
+          transformer_name: email          
+        - name: phone
+          transformer_name: rndvar          
+        - name: name
+          transformer_name: rndvar                                                
+    - table: studentsnew
+      columns:
+        - name: age
+          transformer_name: rndint2         
+        - name: name
+          transformer_name: rndvar    
+        - name: email
+          transformer_name: email                                                               
+datastore:
+  path: ./datasource
+
+
+ 
